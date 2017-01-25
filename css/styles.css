@@ -1,0 +1,55 @@
+/* ---movie list --*/
+.content {
+    padding-bottom: 44px;
+}
+
+.movie-list{
+    
+}
+
+.movie-data .title{
+    font-size: 1.4em;
+    float: left;
+}
+.movie-data .rating-container{
+    float: right;
+}
+
+.movie-data .description{
+    clear: both;
+    font-size: .8em;
+    white-space: normal;
+    padding-top: 10px;
+}
+
+.movie-data .details-button{
+    float: right;
+}
+/* start directive */
+.star{
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    background-size: contain !important;
+}
+
+.star.full{
+    background: url('../images/star-on.png') no-repeat;
+}
+.star.half{
+    background: url('../images/star-half.png') no-repeat;
+}
+.star.none{
+    background: url('../images/star-off.png') no-repeat;
+}
+
+.star-value{
+    /*color: blue;*/
+    font-style: italic;
+    padding: 0 10px;
+}
+
+/* movie details */
+.movie-details{
+    color: black;
+}

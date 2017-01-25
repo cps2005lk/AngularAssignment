@@ -1,0 +1,20 @@
+{
+    "id": 3,
+        "title": "Troy",
+        "releasedYear": 2004,
+        "rate": 7.2,
+        "description": "An adaptation of Homer's great epic, the film follows the assault on Troy by the united Greek forces and chronicles the fates of the men involved.",
+        "directedBy": "Wolfgang Petersen",
+        "language": "English",
+        "characters": [
+            {
+                "name": "Achilles",
+                "actor": "Brad Pitt"
+            },
+            {
+                "name": "Hector",
+                "actor": "Eric Bana"
+            }
+
+        ]
+}

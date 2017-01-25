@@ -1,0 +1,37 @@
+<div class="bar bar-header bar-balanced">
+    <button class="button button-icon icon ion-chevron-left" ng-click="md.navigateBack()"></button>
+    <h1 class="title">Details</h1>
+</div>
+<div class="content has-header">
+    <div class="movie-details movie-data card" ng-if="md.movie !== null">
+        <div class="item item-text-wrap">
+            <div class="top">
+                <span class="title">{{md.movie.title}} ({{md.movie.releasedYear}})</span>
+                <span class="rating-container">
+                    <movie-rating rate="md.movie.rate"></movie-rating>
+                </span>
+            </div>
+            <div ng-bind="md.movie.description" class="description"></div>
+            <div class="row" ng-if="md.movie.directedBy">
+                <div class="col">Directed by:</div>
+                <div class="col" ng-bind="md.movie.directedBy"></div>
+            </div>
+            <div class="row" ng-if="md.movie.releasedYear">
+                <div class="col">Release Year</div>
+                <div class="col" ng-bind="md.movie.releasedYear"></div>
+            </div>
+            <div class="row" ng-if="md.movie.language">
+                <div class="col">Language</div>
+                <div class="col" ng-bind="md.movie.language"></div>
+            </div>
+            <div ng-if="md.movie.characters.length > 0">
+                <h2>Characters</h2>
+                <ul class="list card">
+                    <li class="item" ng-repeat="character in md.movie.characters">
+                        {{character.name}} ({{character.actor}})
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

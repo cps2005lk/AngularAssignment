@@ -1,0 +1,13 @@
+{
+  "name": "assignment",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "0.4.2",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-express": "~1.0.0-beta2",
+    "grunt-open": "~0.2.1"
+  }
+}

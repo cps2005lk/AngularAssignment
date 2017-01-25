@@ -1,0 +1,20 @@
+<div class="bar bar-header bar-balanced">
+    <h1 class="title">Movie List</h1>
+    <button ng-click="ml.onAdd()" class="button button-stable icon-left ion-plus-circled">Add Movie</button>
+</div>
+<div class="content has-header">
+    <div class="list list-inset movie-list movie-data" ng-if="ml.movieList.length > 0">
+        <div class="item" ng-repeat="movie in ml.movieList | orderBy: '-releasedYear'">
+            <div class="top">
+                <span class="title">{{movie.title}} ({{movie.releasedYear}})</span>
+                <span class="rating-container">
+                    <movie-rating rate="movie.rate"></movie-rating>
+                </span>
+            </div>
+            <div ng-bind="movie.description" class="description"></div>
+            <div class="details-button">
+                <a ng-click="ml.onMovieClick(movie)" class="button icon-right ion-chevron-right button-calm">Details</a>
+            </div>
+        </div>
+    </div>
+</div>

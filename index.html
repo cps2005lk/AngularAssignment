@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Academy Movie List</title>
+
+        <link rel="stylesheet" href="bower_components/ionic/release/css/ionic.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+		
+        <div ui-view></div>
+        
+        <!--lib-->
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+        <!--app-->
+        <script src="app/app.module.js"></script>
+
+        <script src="app/services/data.factory.js"></script>
+        <script src="app/services/hardcodedata.factory.js"></script>
+        <script src="app/services/navigation.factory.js"></script>
+        <script src="app/services/persistance.factory.js"></script>
+
+        <script src="app/directives/rating.directive.js"></script>
+
+        <script src="app/list/movielist.controller.js"></script>
+        <script src="app/details/moviedetails.controller.js"></script>
+        <script src="app/add/movieadd.controller.js"></script>
+    </body>
+</html>
+
+
+

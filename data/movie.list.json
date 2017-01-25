@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": "Saving Private Ryan",
+        "releasedYear": 1998,
+        "rate": 8.6,
+        "description": "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action."
+    },
+    {
+        "id": 2,
+        "title": "Fight Club",
+        "releasedYear": 1999,
+        "rate": "8.8",
+        "description": "An insomniac office worker, looking for a way to change his life, crosses paths with a devil-may-care soap maker, forming an underground fight club that evolves into something much, much more.",
+         "directedBy": "David Fincher",
+        "language": "English",
+        "characters": [
+            {
+                "name": "Tyler Durden",
+                "actor": "Brad Pitt"
+            },
+            {
+                "name": "The Narrator",
+                "actor": "Edward Norton"
+            }
+
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Troy",
+        "releasedYear": 2004,
+        "rate": 7.2,
+        "description": "An adaptation of Homer's great epic, the film follows the assault on Troy by the united Greek forces and chronicles the fates of the men involved.",
+        "directedBy": "Wolfgang Petersen",
+        "language": "English",
+        "characters": [
+            {
+                "name": "Achilles",
+                "actor": "Brad Pitt"
+            },
+            {
+                "name": "Hector",
+                "actor": "Eric Bana"
+            }
+
+        ]
+    }
+
+]

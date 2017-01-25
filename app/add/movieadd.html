@@ -1,0 +1,65 @@
+<div class="bar bar-header bar-balanced">
+    <button class="button button-icon icon ion-chevron-left" ng-click="ma.navigateBack()"></button>
+    <h1 class="title">{{ma.isAddingMovie ? 'Create Movie' : 'Add Character'}}</h1>
+    <button class="button button-icon icon ion-checkmark" ng-disabled="ma.isAddingMovie ? movieAddForm.$invalid : characterAddForm.$invalid"
+        ng-click="ma.addMovie()"></button>
+</div>
+<div class="content has-header">
+    <form name="movieAddForm" class="card list list-inset" novalidate ng-show="ma.isAddingMovie">
+        <label class="item item-input">
+            <span class="input-label">Title</span>
+            <input type="text" ng-model="ma.formData.title" required>
+        </label>
+        <label class="item item-input">
+            <span class="input-label">Description</span>
+            <textarea ng-model="ma.formData.description" required></textarea>
+        </label>
+        <label class="item item-input">
+            <span class="input-label">Director</span>
+            <input type="text" ng-model="ma.formData.directedBy" required>
+        </label>
+        <label class="item item-input">
+            <span class="input-label">Release Year</span>
+            <input type="number" ng-model="ma.formData.releasedYear" required ng-minlength="4" ng-maxlength="4">
+        </label>
+        <label class="item item-input item-select">
+            <div class="input-label">Rating</div>
+            <select ng-model="ma.formData.rate">
+                <option ng-value="{{rate}}" ng-repeat="rate in ma.ratingList">{{rate}}</option>
+            </select>
+        </label>
+        <label class="item item-input item-select">
+            <div class="input-label">Language</div>
+            <select ng-model="ma.formData.language">
+                <option ng-value="{{lang}}" ng-repeat="lang in ma.langList">{{lang}}</option>
+            </select>
+        </label>
+    </form>
+    <form name="characterAddForm" class="list list-inset" novalidate ng-show="!ma.isAddingMovie">
+        <div class="item item-divider item-icon-left assertive" >
+            <i class="icon ion-film-marker"></i>{{ma.formData.title}}
+        </div>
+        <label class="item item-input">
+            <span class="input-label">Character</span>
+            <input type="text" ng-model="ma.characterData.name" required>
+        </label>
+        <label class="item item-input">
+            <span class="input-label">Actor</span>
+            <textarea ng-model="ma.characterData.actor" required></textarea>
+        </label>
+
+
+        <div ng-if="ma.formData.characters.length > 0" class="card list">
+            <div class="row item item-divider">
+                <div class="col">Character</div>
+                <div class="col">Actor</div>
+            </div>
+            <div class="row item" ng-repeat="item in ma.formData.characters | orderBy: 'character'">
+                <div class="col">{{item.name}}</div>
+                <div class="col">{{item.actor}}</div>
+            </div>
+        </div>
+
+    </form>
+
+</div>
